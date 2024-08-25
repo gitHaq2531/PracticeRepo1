@@ -1,6 +1,8 @@
 package com.client.shoProd.generic.baseUtility;
 
 import java.io.IOException;
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -19,15 +21,14 @@ import com.client.shoProd.generic.webdriverUtility.webDriverUtils;
 
 public class BaseClassUtils 
 {
-	public DatabaseUtils dbUtils=new DatabaseUtils();
+	//public DatabaseUtils dbUtils=new DatabaseUtils();
 	public FileUtils fUtils=new FileUtils();
 	public WebDriver driver=null;
-	public webDriverUtils wdUtils=new webDriverUtils();
 	
 // connect to database...
 @BeforeSuite
 public void beforeSuite()  {
-	dbUtils.getDataBaseConnection();;
+	//dbUtils.getDataBaseConnection();;
 }
 
 //launch browser
@@ -45,8 +46,7 @@ public void beforeClass() throws IOException {
 		driver=new FirefoxDriver();
 	}
 	UtilityClassObject.setDriver(driver);
-	wdUtils.maximizeWindow(driver);
-	wdUtils.waitToLoadPage(driver);
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 }
 
 @BeforeMethod
@@ -76,7 +76,7 @@ public void afterClass() {
 
 @AfterSuite
 public void afterSuite() {
-	dbUtils.closeDataBaseConnection();;
+	//dbUtils.closeDataBaseConnection();;
 }
 
 }

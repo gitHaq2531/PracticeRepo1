@@ -9,6 +9,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.client.shoProd.generic.baseUtility.BaseClassUtils;
+import com.client.shoProd.generic.webdriverUtility.webDriverUtils;
 
 @Listeners(com.client.shoProd.generic.ListenersUtility.ListenersImpClass.class)
 public class Flipkart extends BaseClassUtils
@@ -21,7 +22,7 @@ public void flipkartTest() throws IOException {
 	driver.switchTo().newWindow(WindowType.WINDOW);
 	driver.get("https://www.flipkart.com");
 	Assert.fail();
-
+	webDriverUtils wdUtils=new webDriverUtils();
 	wdUtils.switchToWindowByTitle(driver, "Amazon");
 	wdUtils.scrollForFixAmount(driver, 0, 200);
 }
