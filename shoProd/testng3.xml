@@ -3,10 +3,6 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.client.shoProd.module.Flipkart2"/>
-      <class name="com.client.shoProd.module.Flipkart3"/>
-      <class name="com.client.shoProd.module.Flipkart"/>
-      <class name="com.client.shoProd.module.Flipkart4"/>
       <class name="com.client.shoProd.module.Flipkart5"/>
       <class name="com.client.shoProd.module.Flipkart6"/>
     </classes>
