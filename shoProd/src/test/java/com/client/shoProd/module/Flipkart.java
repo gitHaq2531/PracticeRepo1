@@ -16,6 +16,7 @@ public class Flipkart extends BaseClassUtils
 {
 @Test
 public void flipkartTest() throws IOException {
-	System.out.println("test execute");
+	System.out.println("test execute1");
+	System.out.println("updated");
 	}
 }
