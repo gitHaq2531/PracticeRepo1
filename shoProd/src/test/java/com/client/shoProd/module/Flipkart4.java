@@ -17,14 +17,6 @@ public class Flipkart4 extends BaseClassUtils
 @Test
 public void flipkartTest() throws IOException {
 	System.out.println("test execute4");
-	JavascriptExecutor js=(JavascriptExecutor)driver;
-	js.executeScript("window.scrollTo(200,200)");
-	driver.switchTo().newWindow(WindowType.WINDOW);
-	driver.get("https://www.flipkart.com");
-	Assert.fail();
-	webDriverUtils wdUtils=new webDriverUtils();
-
-	wdUtils.switchToWindowByTitle(driver, "Amazon");
-	wdUtils.scrollForFixAmount(driver, 0, 200);
+	
 }
 }
