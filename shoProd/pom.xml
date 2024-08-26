@@ -104,8 +104,7 @@
 		</plugins>
 	</build>
 	  </profile>
-  </profiles>
- 
+  </profiles> 
    <build>
 		<plugins>
 			<plugin>
@@ -121,5 +120,4 @@
 			</plugin>
 		</plugins>
 	</build>
-  
 </project>
